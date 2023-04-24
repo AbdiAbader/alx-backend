@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """ basic cache """
 
 from base_caching import BaseCaching
@@ -11,6 +11,7 @@ class BasicCache(BaseCaching):
             self.cache_data[key] = item
 
     def get(self, key):
+        """get method"""
         if key in self.cache_data:
             return self.cache_data[key]
         return None
