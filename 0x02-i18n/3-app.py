@@ -24,6 +24,7 @@ def hello():
     """hello function"""
     return render_template('3-index.html')
 
+
 @babel.localeselector
 def get_locale():
     """get locale function"""
