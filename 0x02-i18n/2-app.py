@@ -18,15 +18,16 @@ class Config(object):
 
 app.config.from_object('1-app.Config')
 
-@babel.localeselector
-def get_locale():
-    """get locale function"""
-    return request.accept_languages.best_match(app.config['LANGUAGES'])
 
 @app.route('/', strict_slashes=False)
 def hello():
     """hello function"""
     return render_template('1-index.html')
+
+@babel.localeselector
+def get_locale():
+    """get locale function"""
+    return request.accept_languages.best_match(app.config['LANGUAGES'])
 
 
 if __name__ == "__main__":
