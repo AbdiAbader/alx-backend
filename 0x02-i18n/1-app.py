@@ -3,11 +3,11 @@
 
 from flask_babel import Babel, request
 from flask import Flask, render_template
-from config import Config
+
 
 
 app = Flask(__name__)
-app.config.from_object(Config)
+
 babel = Babel(app)
 
 
@@ -17,7 +17,7 @@ class Config(object):
     BABEL_DEFAULT_LOCALE = 'en'
     BABEL_DEFAULT_TIMEZONE = 'UTC'
 
-
+app.config.from_object(1-app.Config)
 
 @app.route('/', strict_slashes=False)
 def hello():
